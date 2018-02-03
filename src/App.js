@@ -10,11 +10,26 @@ class Hello extends Component {
     // make sure to return some UI
     return (
       <div>
-        <h1>Hello World!</h1>
+        <h1>Hi there {this.props.name}!</h1>
         <h3>It is tea time...</h3>
+        <h2>{this.props.name} is {this.props.age}.</h2>
+        <h3>{this.props.name} likes {this.props.favourites}. </h3>
       </div>
     )
   }
 }
+
+
+class Sayonara extends Component {
+
+  render () {
+    return (
+      <div>
+        <h2>{this.props.favourites}</h2>
+      </div>
+    )
+  }
+}
+
 
 export default Hello
