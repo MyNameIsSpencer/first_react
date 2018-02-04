@@ -14,10 +14,22 @@ var person = {
   ]
 }
 
+var post = {
+  postTitle: "Galactizarauz",
+  postAuthor: "Dinotron",
+  postBody: "What do you do when faced with a life crisis you don't have the CPU to compute?",
+  postComments: [
+    " Blew my MIND!!",
+    " I never thought I could relate so much to a robotic dinosaur.",
+    " The ending where Triceratops killed his father to validate his inner worth could have been executed better"
+  ]
+}
+
+
 ReactDOM.render(
   <Hello
   name = {person.personName}
-  age = {person.personAge}
+  age = {post.postTitle}
   favourites = {person.favourites}/>,
   document.getElementById('root')
 )
