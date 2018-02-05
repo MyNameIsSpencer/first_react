@@ -5,11 +5,23 @@ import React, {Component} from 'react';
 // define our Hello component
 class Hello extends Component {
   // what should the component render?
-  constructor props {
+  constructor (props) {
     // make call to parent class' (Component) constructor
     super()
     this.state = {
       moodPoints: 1
+    }
+  }
+
+  increaseMood(e) {
+    if (this.state.moodPoints === 10){
+      this.setState({
+        moodPoints : 1
+      })
+    } else {
+      this.setState({
+        moodPoints: this.state.moodPoints + 1
+      })
     }
   }
   render () {
@@ -23,7 +35,7 @@ class Hello extends Component {
         <h2>{this.props.name} is {this.props.age}.</h2>
         <h3>{this.props.name} likes {this.props.favourites}. </h3>
         <p>You are this happy: {this.state.moodPoints}</p>
-
+        <button onClick={(e) => this.increaseMood(e)}>Cheer up!</button>
       </div>
     )
   }
